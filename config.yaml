@@ -1,11 +1,25 @@
-
+#1st pipeline
 artifacts:
   ARTIFACTS_DIR: artifacts
   PREPARED_DATA: prepared
   TRAIN_DATA: tarin.tsv
   TEST_DATA: test.tsv
+#2nd pipeline
+  FEATURE_DIR: features
+  TRANSFORMER_FILE: transformer.pkl
+  FEATURIZED_TRAIN_DATA: train.pkl
+  FEATURIZED_TEST_DATA: test.pkl
 
-local_data_file_path: C:/Users/Hp/Downloads/============--ML Project With Rohan--=/stack-overflow-project sk/data.xml
 
-split_ratio: 0.3
+local_data_file_path: data.xml
+
+split_ratio: 0.2
+
+featurize:
+  max_features: 2500
+  ngrams: 2 
+
+
+ 
+
 

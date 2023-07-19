@@ -16,6 +16,7 @@ def preparedata(config_path):
         with open(train_data_path,"w",encoding="utf-8") as train_data:
             with open(test_data_path,"w",encoding="utf-8") as test_data:
                 process_posts(f_in=f_in.read(),target_tag="<python>",f_out_train=train_data,f_out_test=test_data,split=split_ratio)
+  
 
 
 
