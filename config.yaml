@@ -4,11 +4,18 @@ artifacts:
   PREPARED_DATA: prepared
   TRAIN_DATA: tarin.tsv
   TEST_DATA: test.tsv
+
 #2nd pipeline
   FEATURE_DIR: features
   TRANSFORMER_FILE: transformer.pkl
   FEATURIZED_TRAIN_DATA: train.pkl
   FEATURIZED_TEST_DATA: test.pkl
+
+#3rd pipeline
+  MODEL_DIR: models
+  MODEL_PATH: model.pkl
+
+
 
 
 local_data_file_path: data.xml

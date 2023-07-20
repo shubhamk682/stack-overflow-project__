@@ -41,7 +41,7 @@ def save_matrix(df, matrix, out_path):
     label_matrix = sparse.csr_matrix(df.label.astype(np.int64)).T
     result = sparse.hstack([id_matrix, label_matrix, matrix], format="csr")
     joblib.dump(result, out_path)                
-
-
-#except Exceptional as e:
-                #raise e
+    
+    #except Exceptional as e:
+            #raise e
+        
