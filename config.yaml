@@ -15,8 +15,10 @@ artifacts:
   MODEL_DIR: models
   MODEL_PATH: model.pkl
 
-
-
+#4th pipeline
+  JSON_ROC_PATH: ROC.json
+  PREC_JSON_PATH: PRECISION.json
+  SCORE_FILE_PATH: SCORES.json
 
 local_data_file_path: data.xml
 
