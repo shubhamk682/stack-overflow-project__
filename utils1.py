@@ -9,6 +9,7 @@ import scipy.sparse as sparse
 import joblib 
 import numpy as np
 
+#for 1stage
 def process_posts(f_in, target_tag, f_out_train, f_out_test, split):
     try:
         root = ET.fromstring(f_in)
@@ -35,7 +36,18 @@ def get_df(path_to_data,sep="\t"):
     df=pd.read_csv(path_to_data,encoding="utf-8",header=None,delimiter=sep,names=["ID","label","text"])
     return df    
 
+def get_df_for_predict(path_to_data: str, sep: str="\t") -> pd.DataFrame:
+    df = pd.read_csv(
+        path_to_data, 
+        encoding="utf-8",
+        header=None,
+        delimiter=sep,
+        names=["text"]
+    )
+    return df
 
+
+#for 2nd stage
 def save_matrix(df, matrix, out_path):
     id_matrix = sparse.csr_matrix(df.ID.astype(np.int64)).T
     label_matrix = sparse.csr_matrix(df.label.astype(np.int64)).T
